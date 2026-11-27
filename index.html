@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Indigo Workplaces | Human-centred workplace consultancy</title>
+<meta name="description" content="Indigo Workplaces helps organisations with difficult conversations, culture reviews, employee experience and leadership development.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path d='M10 54C8 28 24 8 54 8c2 28-12 46-38 46z' fill='%23183B8C'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --indigo:#183B8C; --navy:#0D1B3F; --ivory:#F9F7F3; --sage:#94A88C; --terra:#D97841; --lav:#A3A5D9;
+  --grey:#4A4A4A; --line:#E8E5E0;
+  --serif:"Playfair Display",Georgia,serif; --sans:"Inter","Helvetica Neue",Arial,sans-serif; --hand:"Caveat","Segoe Script",cursive;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{margin:0;background:var(--ivory);color:#202020;font:400 1.0625rem/1.7 var(--sans)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--terra);outline-offset:3px}
+.wrap{max-width:70rem;margin:0 auto;padding:0 1.5rem}
+h1,h2,h3{font-family:var(--serif);color:var(--indigo);line-height:1.12;margin:0 0 1rem;letter-spacing:-.01em}
+h1{font-size:clamp(2.3rem,5.6vw,4.2rem);font-weight:700}
+h2{font-size:clamp(1.9rem,4vw,2.9rem);font-weight:700}
+h3{font-size:1.45rem;font-weight:500}
+.stroke{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12' preserveAspectRatio='none'%3E%3Cpath d='M2 8C40 2 80 10 120 5s60-1 78 2' fill='none' stroke='%23D97841' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E") left bottom/100% .32em no-repeat;padding-bottom:.18em}
+.hand{font-family:var(--hand);font-size:1.7rem;color:var(--terra)}
+.btn{display:inline-block;min-height:3.25rem;padding:.9rem 1.7rem;border-radius:.75rem;font-weight:600;text-decoration:none;background:var(--indigo);color:#fff;border:2px solid var(--indigo);transition:background .2s,border-color .2s,color .2s}
+.btn:hover{background:var(--terra);border-color:var(--terra)}
+.btn.alt{background:#fff;color:var(--indigo);margin-left:.6rem}
+.btn.alt:hover{color:#fff}
+header{position:sticky;top:0;z-index:5;background:rgba(249,247,243,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0}
+.logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;font:600 1rem var(--sans);letter-spacing:.14em;color:var(--indigo)}
+nav{display:flex;align-items:center;gap:1.6rem}
+nav a:not(.btn){text-decoration:none;font-weight:500}
+nav a:not(.btn):hover{color:var(--terra)}
+nav .btn{min-height:2.75rem;padding:.55rem 1.2rem}
+@media (max-width:52rem){nav a:not(.btn){display:none}}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center;padding:5rem 0 6rem}
+@media (max-width:52rem){.hero{grid-template-columns:1fr;padding:3rem 0}}
+.lede{font-size:1.2rem;max-width:36rem}
+.tag{font-weight:600;color:var(--indigo);margin:1.5rem 0}
+.panel{background:var(--indigo);color:#fff;border-radius:2rem;padding:3rem 2.25rem;position:relative;box-shadow:0 16px 48px rgba(0,0,0,.12)}
+.panel::after{content:"";position:absolute;right:-1rem;bottom:-1rem;width:55%;height:55%;border-radius:2rem;background:var(--sage);opacity:.55;z-index:-1}
+.panel p{font:500 1.7rem/1.3 var(--serif);margin:0 0 1.2rem}
+.panel p:last-child{margin:0}
+section{padding:5rem 0}
+.intro{max-width:44rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));gap:1.5rem;margin-top:2.5rem}
+.card{background:#fff;border-radius:1.5rem;padding:2rem;box-shadow:0 4px 12px rgba(0,0,0,.08);border-top:5px solid var(--sage);transition:transform .2s}
+.card:hover{transform:translateY(-6px)}
+.card:nth-child(2n){border-top-color:var(--terra)}
+.card:nth-child(3n){border-top-color:var(--lav)}
+.card p{margin:0 0 1rem;color:var(--grey)}
+.card b{color:var(--indigo)}
+.dark{background:var(--navy);color:#fff}
+.dark h2{color:#fff}
+.dark .big{font:500 clamp(1.5rem,3.4vw,2.3rem)/1.3 var(--serif);margin:0}
+.dark .big span{display:block}
+.vals{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1.5rem 2rem;margin-top:3rem}
+.vals h3{color:var(--lav);font:600 1.05rem var(--sans);margin-bottom:.25rem}
+.vals p{margin:0;color:#dfe3f0}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:1.5rem;margin:2.5rem 0 0;padding:0;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;border-top:2px solid var(--indigo);padding-top:1rem}
+.steps li::before{content:counter(s);font:700 1.1rem var(--serif);color:var(--terra)}
+.steps strong{display:block;font:500 1.4rem var(--serif);color:var(--indigo)}
+.outcomes{columns:2 16rem;margin:2rem 0 0;padding-left:1.2rem}
+.cta{background:#fff;text-align:center}
+.cta .intro{margin:0 auto}
+.cta ul{list-style:none;padding:0;margin:1.5rem auto 2rem;max-width:26rem;text-align:left}
+.cta li::before{content:"\2713";color:var(--sage);font-weight:700;margin-right:.6rem}
+.mail{display:block;margin-top:1.5rem;font:500 1.4rem var(--serif);color:var(--indigo)}
+footer{background:var(--navy);color:#c9cfe4;padding:2rem 0;font-size:.95rem}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top" aria-label="Indigo Workplaces home">
+      <svg width="30" height="30" viewBox="0 0 64 64" aria-hidden="true"><path d="M10 54C8 28 24 8 54 8c2 28-12 46-38 46z" fill="#183B8C"/><path d="M12 52C24 36 34 26 48 16" stroke="#F9F7F3" stroke-width="3" stroke-linecap="round" fill="none"/></svg>
+      INDIGO WORKPLACES
+    </a>
+    <nav aria-label="Main">
+      <a href="#help">What we help solve</a>
+      <a href="#why">Why Indigo</a>
+      <a href="#how">How we work</a>
+      <a class="btn" href="#contact">Book a Conversation</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div>
+      <h1>Workplaces are built one <span class="stroke">conversation</span>, one leader and one employee experience at a time.</h1>
+      <p class="lede">At Indigo Workplaces, we help organisations navigate the people challenges that impact culture, engagement and performance, so people feel valued, supported and able to do their best work.</p>
+      <p class="tag">Human-centred. Practical. Trusted.</p>
+      <a class="btn" href="#contact">Let’s talk about your workplace</a><a class="btn alt" href="#help">Explore services</a>
+    </div>
+    <div class="panel" aria-hidden="true">
+      <p>Human enough to connect.</p>
+      <p>Experienced enough to guide.</p>
+      <p>Practical enough to make it happen.</p>
+      <span class="hand">Let’s talk.</span>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap intro">
+      <h2>When people thrive, organisations thrive</h2>
+      <p>Most workplace problems don’t begin as major issues. They start with conversations that never happen, leaders who don’t feel equipped, employees who don’t feel heard, and cultures that drift away from their good intentions.</p>
+      <p>We help you understand what is happening beneath the surface and provide practical solutions that strengthen leadership, improve culture and create better employee experiences.</p>
+    </div>
+  </section>
+
+  <section id="help" style="padding-top:0">
+    <div class="wrap">
+      <h2>What we help solve</h2>
+      <div class="cards">
+        <article class="card"><h3>Difficult conversations</h3><p>Avoided conversations often become expensive problems. We build the confidence and skills to handle performance issues, conflict and feedback with clarity and respect.</p><b>Difficult conversations don’t need to be destructive. They need to be effective.</b></article>
+        <article class="card"><h3>Culture reviews</h3><p>Something feels off, but you’re not sure why. We uncover what shapes your culture and create practical pathways for improvement.</p><b>Understand the culture you have. Create the culture you want.</b></article>
+        <article class="card"><h3>Employee experience</h3><p>People remember how work feels. We design experiences that strengthen engagement, retention and wellbeing at every stage of the employee journey.</p><b>From onboarding to career growth, every interaction matters.</b></article>
+        <article class="card"><h3>Leadership development</h3><p>Technical expertise doesn’t always prepare people to lead. We build the confidence, communication skills and people capability to lead successful teams.</p><b>Better leaders create better workplaces.</b></article>
+        <article class="card"><h3>Workplace consultancy</h3><p>Sometimes you simply need a trusted advisor for a complex people challenge, organisational change or strategic guidance.</p><b>Expert advice without complexity or jargon.</b></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="why" class="dark">
+    <div class="wrap">
+      <h2>Why Indigo Workplaces</h2>
+      <p class="big"><span>We’re not traditional consultants.</span><span>We work alongside you to make it happen.</span></p>
+      <div class="vals">
+        <div><h3>Approachable</h3><p>We make complex people issues easier to navigate.</p></div>
+        <div><h3>Practical</h3><p>We focus on solutions that can actually be implemented.</p></div>
+        <div><h3>Experienced</h3><p>Expertise across workplace culture, employee relations, leadership and employee experience.</p></div>
+        <div><h3>Human-centred</h3><p>Because every workplace challenge involves people.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <h2>How we work</h2>
+      <ol class="steps">
+        <li><strong>Discover</strong>We listen, ask questions and understand what’s really happening.</li>
+        <li><strong>Understand</strong>We identify the root causes, not just the symptoms.</li>
+        <li><strong>Design</strong>We develop practical solutions tailored to your organisation.</li>
+        <li><strong>Deliver</strong>We work alongside you to create lasting change and measurable outcomes.</li>
+      </ol>
+      <h3 style="margin-top:3rem">The outcomes we help create</h3>
+      <ul class="outcomes">
+        <li>More confident leaders</li><li>Stronger workplace relationships</li><li>Improved employee engagement</li><li>Better retention of talent</li>
+        <li>Healthier workplace cultures</li><li>Increased accountability</li><li>Stronger employee experiences</li><li>Sustainable organisational performance</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="cta">
+    <div class="wrap">
+      <div class="intro">
+        <h2>Your people deserve more than <span class="stroke">good intentions</span></h2>
+        <p>Healthy workplace cultures don’t happen by accident. They are built through strong leadership, honest conversations and intentional employee experiences.</p>
+        <ul>
+          <li>Talk through your current workplace challenge</li>
+          <li>Ask questions in a confidential setting</li>
+          <li>Gain an independent perspective</li>
+          <li>Decide whether we’re the right fit</li>
+        </ul>
+        <a class="btn" href="mailto:hello@example.com?subject=Discovery%20conversation">Book a complimentary discovery conversation</a>
+        <a class="mail" href="mailto:hello@example.com">hello@example.com</a>
+        <p><em>No pressure. No sales pitch. Just a genuine conversation about your people and your workplace.</em></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">© <span id="yr">2026</span> Indigo Workplaces. All rights reserved.</div></footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
