@@ -2,7 +2,7 @@
 <html lang="en-AU">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Indigo Workplaces | Human-centred workplace consultancy</title>
 <meta name="description" content="Indigo Workplaces helps organisations with difficult conversations, culture reviews, employee experience and leadership development.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path d='M10 54C8 28 24 8 54 8c2 28-12 46-38 46z' fill='%23183B8C'/></svg>">
@@ -17,23 +17,23 @@
   color-scheme:light;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:5rem;-webkit-text-size-adjust:100%}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
-body{margin:0;background:var(--ivory);color:#202020;font:400 1.0625rem/1.7 var(--sans)}
+body{margin:0;overflow-x:clip;background:var(--ivory);color:#202020;font:400 1.0625rem/1.7 var(--sans)}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--terra);outline-offset:3px}
-.wrap{max-width:70rem;margin:0 auto;padding:0 1.5rem}
+.wrap{max-width:70rem;margin:0 auto;padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right))}
 h1,h2,h3{font-family:var(--serif);color:var(--indigo);line-height:1.12;margin:0 0 1rem;letter-spacing:-.01em}
 h1{font-size:clamp(2.3rem,5.6vw,4.2rem);font-weight:700}
 h2{font-size:clamp(1.9rem,4vw,2.9rem);font-weight:700}
 h3{font-size:1.45rem;font-weight:500}
-.stroke{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12' preserveAspectRatio='none'%3E%3Cpath d='M2 8C40 2 80 10 120 5s60-1 78 2' fill='none' stroke='%23D97841' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E") left bottom/100% .32em no-repeat;padding-bottom:.18em}
+.stroke{-webkit-box-decoration-break:clone;box-decoration-break:clone;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12' preserveAspectRatio='none'%3E%3Cpath d='M2 8C40 2 80 10 120 5s60-1 78 2' fill='none' stroke='%23D97841' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E") left bottom/100% .32em no-repeat;padding-bottom:.18em}
 .hand{font-family:var(--hand);font-size:1.7rem;color:var(--terra)}
 .btn{display:inline-block;min-height:3.25rem;padding:.9rem 1.7rem;border-radius:.75rem;font-weight:600;text-decoration:none;background:var(--indigo);color:#fff;border:2px solid var(--indigo);transition:background .2s,border-color .2s,color .2s}
 .btn:hover{background:var(--terra);border-color:var(--terra)}
 .btn.alt{background:#fff;color:var(--indigo);margin-left:.6rem}
 .btn.alt:hover{color:#fff}
-header{position:sticky;top:0;z-index:5;background:rgba(249,247,243,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+header{padding-top:env(safe-area-inset-top);position:sticky;top:0;z-index:5;background:rgba(249,247,243,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
 .bar{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0}
 .logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;font:600 1rem var(--sans);letter-spacing:.14em;color:var(--indigo)}
 nav{display:flex;align-items:center;gap:1.6rem}
@@ -75,7 +75,36 @@ section{padding:5rem 0}
 .cta ul{list-style:none;padding:0;margin:1.5rem auto 2rem;max-width:26rem;text-align:left}
 .cta li::before{content:"\2713";color:var(--sage);font-weight:700;margin-right:.6rem}
 .mail{display:block;margin-top:1.5rem;font:500 1.4rem var(--serif);color:var(--indigo)}
-footer{background:var(--navy);color:#c9cfe4;padding:2rem 0;font-size:.95rem}
+footer{background:var(--navy);color:#c9cfe4;padding:2rem 0 calc(2rem + env(safe-area-inset-bottom));font-size:.95rem}
+.short{display:none}
+@media (hover:none){.card:hover{transform:none}}
+@media (max-width:40rem){
+  .wrap{padding-left:max(1.25rem,env(safe-area-inset-left));padding-right:max(1.25rem,env(safe-area-inset-right))}
+  body{font-size:1rem}
+  .logo{font-size:.78rem;letter-spacing:.08em;gap:.45rem}
+  .logo svg{width:26px;height:26px}
+  nav .btn{min-height:2.75rem;padding:.5rem 1rem;font-size:.92rem}
+  .hero{padding:2rem 0 3rem;gap:2.25rem}
+  h1{font-size:2.1rem}
+  h2{font-size:1.8rem}
+  .lede{font-size:1.08rem}
+  .hero .btn,.cta .btn{display:block;width:100%;text-align:center}
+  .btn.alt{margin:.75rem 0 0}
+  .panel{padding:2rem 1.5rem;border-radius:1.5rem}
+  .panel::after{right:-.5rem;bottom:-.5rem}
+  .panel p{font-size:1.4rem}
+  section{padding:3rem 0}
+  #help{padding-top:0!important}
+  .cards{margin-top:1.75rem}
+  .card{padding:1.5rem;border-radius:1.25rem}
+  .vals{margin-top:2rem}
+  .outcomes{columns:1}
+  .mail{font-size:1.1rem;overflow-wrap:anywhere}
+}
+@media (max-width:26rem){
+  .long{display:none}
+  .short{display:inline}
+}
 </style>
 </head>
 <body>
@@ -89,7 +118,7 @@ footer{background:var(--navy);color:#c9cfe4;padding:2rem 0;font-size:.95rem}
       <a href="#help">What we help solve</a>
       <a href="#why">Why Indigo</a>
       <a href="#how">How we work</a>
-      <a class="btn" href="#contact">Book a Conversation</a>
+      <a class="btn" href="#contact"><span class="long">Book a Conversation</span><span class="short">Let’s talk</span></a>
     </nav>
   </div>
 </header>
